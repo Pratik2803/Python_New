@@ -65,7 +65,7 @@ print("""for add enter 1
       for divide enter 4""")
 
 operation = get_number_until_4()
-
+x = 0
 if operation == 1:
     x = add(number_one, number_two)
 elif operation == 2:
