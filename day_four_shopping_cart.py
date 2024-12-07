@@ -9,23 +9,14 @@ class ShoppingCart:
 
     def add_item(self, item_name: str, price: float, quantity: int) -> None:
         """
-        Add an item to the shopping cart.
+        Add or update an item in the shopping cart.
 
         :param item_name: Name of the item
-        :param price: Price of the item
-        :param quantity: Quantity of the item
+        :param price: Price of the item  (positive float)
+        :param quantity: Quantity of the item  (positive int)
         """
 
-        if not isinstance(item_name, str) or not item_name:
-            print("Item name must be a non-empty string.")
-            return
-
-        if not isinstance(price, (int, float)) or price <= 0:
-            print("Price must be a positive number.")
-            return
-
-        if not isinstance(quantity, (int)) or quantity <= 0:
-            print("Qty must be a positive number.")
+        if not self._is_valid_item(item_name, price, quantity):
             return
 
         # Check if the item already exists in the cart and update it
@@ -77,6 +68,31 @@ class ShoppingCart:
         print(f"Total cost is : ${total:.2f}")
         return total
 
+    @staticmethod
+    def _is_valid_item(item_name: str, price: float, quantity: int) -> bool:
+        """
+        Validate the item details.
+
+        :param item_name: Name of the item
+        :param price: Price of the item
+        :param quantity: Quantity of the item
+        :return: True if valid, False otherwise
+        """
+
+        if not isinstance(item_name, str) or not item_name.strip():
+            print("Item name must be a non-empty string.")
+            return False
+
+        if not isinstance(price, (int, float)) or price <= 0:
+            print("Price must be a positive number.")
+            return False
+
+        if not isinstance(quantity, (int)) or quantity <= 0:
+            print("Qty must be a positive number.")
+            return False
+
+        return True
+
 
 cart = ShoppingCart()
 cart.add_item("Apple", 0.99, 5)
@@ -86,3 +102,4 @@ cart.calculate_total()
 cart.remove_item("Apple")
 cart.view_cart()
 cart.calculate_total()
+cart.add_item(123, 2.49, 2)
