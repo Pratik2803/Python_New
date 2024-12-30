@@ -1,0 +1,17 @@
+2024-12-28 23:44:31,577 - validators.string_validator - ERROR - Validation Failed: provided value 1234124 is not string
+2024-12-28 23:47:42,123 - validators.string_validator - ERROR - Validation Failed: provided value 1234124 is not string
+2024-12-28 23:48:34,310 - validators.number_validator - ERROR - Validation Failed: 101 is more than max
+2024-12-28 23:48:58,272 - validators.number_validator - ERROR - Validation Failed: Input Hello is not number
+2024-12-28 23:49:04,769 - validators.number_validator - INFO - Validation passed
+2024-12-28 23:51:05,515 - validators.number_validator - INFO - Validation passed
+2024-12-28 23:51:05,516 - validators.email_validator - INFO - Email validation passed
+2024-12-28 23:51:05,516 - validators.email_validator - ERROR - Fuck You. is not a valid email
+2024-12-30 20:54:08,362 - validators.number_validator - INFO - Validation passed
+2024-12-30 20:54:08,363 - validators.email_validator - INFO - Email validation passed
+2024-12-30 20:54:08,363 - validators.email_validator - ERROR - Fuck You. is not a valid email
+2024-12-30 21:05:05,267 - validators.string_validator - ERROR - Validation Failed: Lenth must be between 1 and 6
+2024-12-30 21:10:44,592 - validators.string_validator - ERROR - Validation Failed: provided value 123 is not string
+2024-12-30 21:10:44,593 - validators.string_validator - ERROR - Validation Failed: Lenth must be between 1 and 6
+2024-12-30 21:11:17,776 - validators.string_validator - ERROR - Validation Failed: provided value 123 is not string
+2024-12-30 21:14:38,523 - validators.string_validator - ERROR - Validation Failed: Lenth must be between 5 and 10
+2024-12-30 21:14:38,523 - validators.string_validator - ERROR - Validation Failed: provided value 123 is not string
